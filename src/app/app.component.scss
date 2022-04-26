@@ -60,12 +60,25 @@ html, body{
             background-color: $darkgray;
             height: 80px;
             box-shadow: 0px 5px 5px $extradarkgray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .retirarefectivo1{
+                width:100%;
+                height: 100%;
+            }
+
+            #openefectivo{
+                width:90%;
+                background-color: #aaaaaa;
+            }
         }
 
         .letrero{
             width: 300px;
         }
-        
     }
 }
 
@@ -125,8 +138,7 @@ html, body{
                     background-color: red;
                 }
             }
-
-            img{
+            #iconoflechas{
                 width: 50px;
                 height: 50px;
             }
@@ -134,11 +146,23 @@ html, body{
     }
 }
 
+#tarjeta{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   column-gap: 10px;
+
+   img{
+       width:30px;
+       height:30px;
+   }
+}
+
 #firstbloquetarjeta{
     background-color: $darkgray;
-    box-shadow: 0px 3px 3px $extradarkgray;
+    box-shadow: 0px 5px 10px $extradarkgray;
     z-index: 2;
-
 }
 
 .letrero{
@@ -148,8 +172,13 @@ html, body{
     box-shadow: 0px 0px 20px green;
     text-align: center;
     color:white;
+    
     .p{
         align-self: center;
     }
+}
+
+#efectivo{
+    letter-spacing: 5px;
 }
 

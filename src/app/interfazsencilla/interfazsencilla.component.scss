@@ -1,0 +1,88 @@
+.inicio{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: darkblue;
+    height: 100%;
+
+}
+.menu{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    height: 100%;
+    width: 100%;
+   
+
+    .options{
+        color:darkblue;
+        width:45%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        text-justify: center;
+        border: 1px solid darkblue;
+        cursor: pointer;
+    }  
+
+    
+    .finalizar{
+        background-color: yellow;
+        color: darkblue;
+        padding: 3px 30px;
+        display: flex;
+        justify-self: flex-start;
+        border: 1px solid darkblue;
+
+    }
+
+    
+}
+
+.opcion{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    h2{
+        color: darkblue;
+    }
+
+    p{
+        padding: 10px 20px;
+        border: 2px solid darkblue;
+        color: darkblue;
+    }
+    .ultimosmovimientos{
+        border: 2px solid darkblue;
+        color: darkblue;
+        margin-bottom: 15px;
+        cursor: pointer;
+        height: 17px;
+    }
+
+    .imagenexplicativa{
+        img{
+            height: 80px;
+            width: 400px;;
+        }
+    }
+}
+
+.volver {
+    background-color: yellow;
+    border:2px solid darkblue;
+    color: darkblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    justify-content: flex-end;
+}

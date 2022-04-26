@@ -1,4 +1,33 @@
-<div class="menu">
-    <div ngFor*="let opcion of menuoptions">opcion</div>
+
+<div class="inicio">
+    <h1>buenos días  {{cuenta.nombre}}</h1>
 </div>
 
+<div class="menu" *ngIf="menu_actual == 0">
+    <div class="options" *ngFor="let opcion of menuoptions" (click)="changeMenu(opcion)"><p>{{opcion}}</p></div>
+    <div class="finalizar">finalizar</div>
+</div>
+
+<div class="opcion" id="ingresar" *ngIf="menu_actual == 1" >
+    <h2>ingresar</h2>
+    <div class="imagenexplicativa"><img src="assets\images\efectivo.JPG"></div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+
+</div>
+
+<div class="opcion" id="retirar" *ngIf="menu_actual == 2" >
+    <h2>retirar</h2>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+</div>
+
+<div class="opcion" id="transferencia" *ngIf="menu_actual == 3" >
+    <h2>transferencia</h2>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+</div>
+
+<div class="opcion" id="saldo" *ngIf="menu_actual == 4" >
+    <h2>saldo disponible</h2>
+    <p>tienes {{cuenta.saldo | currency:'EUR':'symbol':'.2-2':'es'}}</p>
+    <div class="ultimosmovimientos">últimos movimientos</div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+</div>
