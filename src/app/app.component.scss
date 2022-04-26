@@ -1,0 +1,113 @@
+
+$extradarkgray: #383838;
+$darkgray: #7a7a7a;
+$semidarkgray: #969696;
+$gray: #9c9c9c;
+$semilightgray: #bababa;
+$lightgray: #c8c8c8;
+
+html, body{
+    height:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+}
+.cajero{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 96vh;
+    width: 100vw;
+}
+
+.partemonitor{
+    background-color: green;
+    width: 70%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .monitor{
+        height:70%;
+        background-color: $semidarkgray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        box-shadow: 80px 0;
+
+        .botones{
+            width: 20%;
+        }
+        .pantalla{
+            width: 80%;
+            background-color: white;
+            margin: 70px 0px;
+        }
+    }
+
+    .efectivo{
+
+        height:30%;
+        background-color: $semidarkgray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items:center;
+
+        .retirarefectivo{
+            width: 800px;
+            background-color: $darkgray;
+            height: 80px;
+            box-shadow: 0px 5px 5px $extradarkgray;
+        }
+        
+    }
+}
+
+.partetarjeta{
+    background-color: red;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+
+    .ingresarecibo{
+        height:20%;
+        background-color: #c8c8c8;
+        width:80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .retirarrecibo{
+            height: 50px;
+            width: 370px;
+            background-color: $darkgray;
+        }
+    }
+
+    .tarjeta{
+        height:80%;
+        background-color: #969696;
+        width:80%;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+}
+
+.letrero{
+    width: 300px;
+    background-color: $extradarkgray;
+    height: 50px;
+    //box-shadow: 0px 0px 20px green;
+    text-align: center;
+    color:white;
+    .p{
+        align-self: center;
+    }
+}
