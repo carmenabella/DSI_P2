@@ -16,7 +16,7 @@ export class AppComponent {
   enciendeLed(mensaje: string){
     switch (mensaje) {
       case "efectivo":
-        let element = document.getElementById(mensaje);
+        let element = document.getElementById("ranuraefectivo");
         let element1 = document.getElementById("openefectivo");
         if(element!= null && element1 != null){
           element.style.boxShadow = "0px 0px 20px green";
@@ -35,7 +35,7 @@ export class AppComponent {
     switch (led) {
       case "efectivo":
         // efectivo
-        let element = document.getElementById("efectivo");
+        let element = document.getElementById("ranuraefectivo");
         let element1 = document.getElementById("openefectivo");
         if(element!= null && element1 != null){
           element.style.boxShadow = "";
@@ -62,17 +62,16 @@ export class AppComponent {
 
   introducirtarjeta(){
     this.interfaz="adaptada";
-    let element = document.getElementById("letrerotarjeta");
+    let element = document.getElementById("ranuratarjeta");
       if(element != null){
-        element.style.boxShadow = "0px 0px 0px green";
+        element.style.boxShadow = "0px 0px 20px orange";
       }
   }
 
   
   finalizar(mensaje: string){
-    console.log("Hola");
     this.interfaz="normal";
-    let element2 = document.getElementById("letrerotarjeta");
+    let element2 = document.getElementById("ranuratarjeta");
         if(element2!= null){
           console.log(element2.style.boxShadow )
           element2.style.boxShadow = "0px 0px 20px green";

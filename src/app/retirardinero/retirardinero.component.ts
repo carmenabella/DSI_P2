@@ -15,13 +15,17 @@ export class RetirardineroComponent implements OnInit {
 
   dineroRetirado: number = 0;
 
+  estado: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   retirarDinero(cantidad:number){
-    this.dineroRetiradoEvent.emit(cantidad);
+    this.dineroRetiradoEvent.emit(-cantidad);
+    this.dineroRetirado = cantidad;
+    this.estado = 1;
 
     // TODO: hay que hacer el mensaje para indicar cuanto ha retirado
 

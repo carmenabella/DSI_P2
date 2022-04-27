@@ -120,7 +120,7 @@ html, body{
             margin-top: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             border: 2px solid $extradarkgray;
             border-bottom: 2px solid $lightgray;
@@ -130,11 +130,8 @@ html, body{
                 border: 2px solid $extradarkgray;
                 height: 30%;
                 width: 100%;
-               
-                :first-child{
-                    background-color: red;
-                }
             }
+
             #iconoflechas{
                 width: 50px;
                 height: 50px;
@@ -149,11 +146,14 @@ html, body{
    justify-content: center;
    align-items: center;
    column-gap: 10px;
-   box-shadow: 0px 0px 20px green;
    img{
        width:30px;
        height:30px;
    }
+}
+
+#ranuratarjeta{
+    box-shadow: 0px 0px 20px green;
 }
 
 #firstbloquetarjeta{
@@ -182,7 +182,7 @@ html, body{
 .interfaznormal{
    height:100%;
    width: 90%;
-   padding: 0 50px;
+   padding: 0 60px;
    background-color: $semilightgray;
 }
 

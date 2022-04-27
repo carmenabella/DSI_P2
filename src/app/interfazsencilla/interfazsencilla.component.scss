@@ -1,11 +1,29 @@
 .inicio{
-    display: none;
+    display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: darkblue;
     font-family: Verdana;
     height: 100%;
+    h1{
+        font-size: 60px;
+        color:darkblue;
+    }
 
+    .barraprogreso{
+        height: 100px;
+        width: 800px;
+        display: flex;
+        align-items: center;
+    }
+
+    p{
+        font-size: 60px;
+        color:darkblue;
+
+    }
 }
 .menu{
 
@@ -13,36 +31,52 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 10px;
+    row-gap: 30px;
     height: 100%;
     width: 100%;
    
 
     .options{
         color:darkblue;
-        font-size: 20px;
+        font-size: 50px;
         font-family: Verdana;
-        width:45%;
-        height: 50px;
+        width:55%;
+        height: 80px;
         display: flex;
         justify-content: center;
-        text-justify: center;
+        align-items: center;
         border: 1px solid darkblue;
         cursor: pointer;
     }  
 
     
     .finalizar{
+        /*
+        margin-top: 15px;
         background-color: yellow;
         color: darkblue;
-        font-size: 15px;
+        font-size: 30px;
         font-family: Verdana;
-        padding: 3px 30px;
+        padding: 10px 30px;
         display: flex;
         justify-self: flex-start;
         border: 1px solid darkblue;
         cursor: pointer; 
+        */
 
+        padding: 20px 20px;
+        font-size: 35px;
+        background-color: yellow;
+        border:2px solid darkblue;
+        font-family: Verdana;
+        color: darkblue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        justify-content: flex-end;
+        column-gap: 10px;
     }
 
     
@@ -55,29 +89,29 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-
     h2{
         color: darkblue;
-        font-size: 25px;
+        font-size: 60px;
         font-family: Verdana;
         font-weight: bold;
+        margin-bottom: 40px;
     }
 
     p{
-        padding: 10px 20px;
+        padding: 50px 30px;
         border: 2px solid darkblue;
         color: darkblue;
         font-family: Verdana;
-        font-size: 25px;
+        font-size: 70px;
     }
     .ultimosmovimientos{
         border: 2px solid darkblue;
         color: darkblue;
         font-family: Verdana;
-        margin-bottom: 15px;
+        margin: 15px 0px;
         cursor: pointer;
-        padding: 6px;
-        font-size: 20px;
+        padding: 20px;
+        font-size: 40px;
         height: 17px;
     }
 
@@ -88,20 +122,25 @@
         align-items: center;
         img{
             object-fit: cover; 
-            height: 100px;
-            width: 300px;; 
+            height: 150px;
+            width: 650px;
         }
 
         #billetes{
-            height:50px;
-            width: 100px;
+            height:150px;
+            width: 200px;
         }
               
     }
 }
+#dineroingresado{
+   column-gap: 100px;
+}
 
 .volver {
     margin-top: 20px;
+    padding: 20px 20px;
+    font-size: 35px;
     background-color: yellow;
     border:2px solid darkblue;
     font-family: Verdana;
@@ -112,4 +151,10 @@
     justify-content: center;
     cursor: pointer;
     justify-content: flex-end;
+    column-gap: 10px;
+}
+
+#alertsign{
+    border-color: white;
+    font-size: 50px;
 }

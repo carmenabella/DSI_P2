@@ -1,6 +1,8 @@
 
-<div class="inicio">
+<div class="inicio" *ngIf="menu_actual == -1">
     <h1>buenos días  {{cuenta.nombre}}</h1>
+    <app-progressbar class="barraprogreso"  [progress]="progressLoading"></app-progressbar>
+    <p>cambiando a interfaz adaptada</p>
 </div>
 
 <div class="menu" *ngIf="menu_actual == 0">
@@ -14,15 +16,15 @@
         <div><img src="assets\images\efectivo.JPG"></div>
         <div><img src="assets\images\images.jpg" id="billetes"></div>
     </div>
-    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon class="keyboard_return">keyboard_return</mat-icon>pulsa para volver</div>
 </div>
 
 <div class="opcion" id="dineroingresado" *ngIf="menu_actual == 5" >
     <h2>ingresar</h2>
     <div class="">
-        <p>Has ingresado 200€</p>
+        <p>has ingresado 200€</p>
     </div>
-    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>pulsa para volver</div>
 
 </div>
 
@@ -33,24 +35,28 @@
     </div>
 
 
-    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>pulsa para volver</div>
 
 </div>
 
 <div class="opcion" id="retirar" *ngIf="menu_actual == 2" >
     <h2>retirar</h2>
     <app-retirardinero (dineroRetiradoEvent)="actualizarSaldo($event)"></app-retirardinero>
-    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>pulsa para volver</div>
 </div>
 
 <div class="opcion" id="transferencia" *ngIf="menu_actual == 3" >
     <h2>transferencia</h2>
-    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+    <div class="imagenexplicativa">
+        <div><img src="assets\images\FueradeServicio.JPG"></div>
+    </div>
+    <p id="alertsign">acuda a la oficina</p>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>pulsa para volver</div>
 </div>
 
 <div class="opcion" id="saldo" *ngIf="menu_actual == 4" >
     <h2>saldo disponible</h2>
     <p>tienes {{cuenta.saldo | currency:'EUR':'symbol':'.2-2':'es'}}</p>
     <div class="ultimosmovimientos">últimos movimientos</div>
-    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>pulsa para volver</div>
 </div>

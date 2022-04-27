@@ -18,6 +18,7 @@ export class InterfazsencillaComponent implements OnInit {
 
   menuoptions= ["retirar dinero", "ingresar dinero", "transferencia bancaria", "saldo cuenta"]
 
+  progressLoading: number = 15;
 
   cuenta: Cuenta;
   @Input() menu_actual: menu_options = menu_options.principal; // menú inicial
@@ -28,6 +29,8 @@ export class InterfazsencillaComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.menu_actual=-1;
+    this.progressUpdate();
   }
 
   changeMenu(newMenu: string){
@@ -63,9 +66,33 @@ export class InterfazsencillaComponent implements OnInit {
     this.cuenta.saldo += cantidad;
   }
 
-}
+  async progressUpdate(){
+    var steps = [20, 30, 40, 55, 63, 75, 88, 95, 97, 100];
+      steps.forEach(async value => {
+        let result = await this.delay(1000);
+        console.log("result");
+        this.progressLoading = value;
+        if(this.progressLoading==100){
+          let result = await this.delay(1000);
+          this.menu_actual=0;
+        }
+      });
+  }
+
+  loading(){
+    return new Promise( resolve =>{
+      
+    });
+  }
+
+
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }}
+
 
 export enum menu_options {
+  bienvenida = -1,
   principal = 0,
   ingresar = 1,
   retirar = 2,

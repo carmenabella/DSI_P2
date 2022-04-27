@@ -1,5 +1,16 @@
-<div class="panel_retirar">
-    <div class="opcion_retirar" id="20" (click)="retirarDinero(-20)">20€</div>
-    <div class="opcion_retirar" id="50" (click)="retirarDinero(-50)">50€</div>
+<div class="panel_retirar" *ngIf="estado == 0">
+    <div class="opcion_retirar" id="20" (click)="retirarDinero(20)">20€</div>
+    <div class="opcion_retirar" id="50" (click)="retirarDinero(50)">50€</div>
     <div class="opcion_retirar">otra cantidad</div>
+</div>
+
+<div  class="panel_retirar" *ngIf="estado == 1">
+    <p>va a retirar {{this.dineroRetirado}}, ¿desea continuar?</p>
+    <div id="contenedor-opciones-confirmar">
+        <div class="opcion-confirmar" id="opcion-si" (click)="estado = 2">Si</div>
+        <div class="opcion-confirmar" id="opcion-no" (click)="estado = 0">No</div>
+    </div>
+</div>
+<div class="mensajeinformativo" *ngIf="estado == 2">
+    ha retirado {{this.dineroRetirado}}€
 </div>

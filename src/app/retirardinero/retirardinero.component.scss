@@ -7,16 +7,51 @@
     row-gap: 10px;
     width: 100%;
 
+    p{
+        margin-top: 20px 0px;
+        color: darkblue;
+        font-family: Verdana;
+        font-size: 50px;
+    }
+
     .opcion_retirar{
-        padding: 10px 20px;
+        padding: 30px 30px;
         border: 2px solid darkblue;
         color: darkblue;
         font-family: Verdana;
-        font-size: 25px;
-
-        :last-child{
-            padding-bottom: 20px;;
-        }
+        font-size: 50px;
     }
 
+    .opcion-confirmar{
+        padding: 30px 30px;
+        border: 2px solid darkblue;
+        color: darkblue;
+        font-family: Verdana;
+        font-size: 40px;
+        margin-top: 20px;
+        
+    }
+
+}
+
+#contenedor-opciones-confirmar {
+    #opcion-si{
+        background-color: #82d86d;
+        color: white
+    }
+    #opcion-no {
+        background-color: #ff6161;
+        color: white;
+    }
+}
+
+    
+.mensajeinformativo{
+    margin-top: 50px 50px;
+    color: darkblue;
+    font-family: Verdana;
+    font-size: 70px;
+    height:200px;
+    display: flex;
+    align-items: center;
 }
