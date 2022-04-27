@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     color: darkblue;
+    font-family: Verdana;
     height: 100%;
 
 }
@@ -19,6 +20,8 @@
 
     .options{
         color:darkblue;
+        font-size: 20px;
+        font-family: Verdana;
         width:45%;
         height: 50px;
         display: flex;
@@ -32,10 +35,13 @@
     .finalizar{
         background-color: yellow;
         color: darkblue;
+        font-size: 15px;
+        font-family: Verdana;
         padding: 3px 30px;
         display: flex;
         justify-self: flex-start;
         border: 1px solid darkblue;
+        cursor: pointer; 
 
     }
 
@@ -52,32 +58,53 @@
 
     h2{
         color: darkblue;
+        font-size: 25px;
+        font-family: Verdana;
+        font-weight: bold;
     }
 
     p{
         padding: 10px 20px;
         border: 2px solid darkblue;
         color: darkblue;
+        font-family: Verdana;
+        font-size: 25px;
     }
     .ultimosmovimientos{
         border: 2px solid darkblue;
         color: darkblue;
+        font-family: Verdana;
         margin-bottom: 15px;
         cursor: pointer;
+        padding: 6px;
+        font-size: 20px;
         height: 17px;
     }
 
     .imagenexplicativa{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         img{
-            height: 80px;
-            width: 400px;;
+            object-fit: cover; 
+            height: 100px;
+            width: 300px;; 
         }
+
+        #billetes{
+            height:50px;
+            width: 100px;
+        }
+              
     }
 }
 
 .volver {
+    margin-top: 20px;
     background-color: yellow;
     border:2px solid darkblue;
+    font-family: Verdana;
     color: darkblue;
     display: flex;
     flex-direction: row;

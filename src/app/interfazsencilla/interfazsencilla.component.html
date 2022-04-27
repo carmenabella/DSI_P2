@@ -5,18 +5,41 @@
 
 <div class="menu" *ngIf="menu_actual == 0">
     <div class="options" *ngFor="let opcion of menuoptions" (click)="changeMenu(opcion)"><p>{{opcion}}</p></div>
-    <div class="finalizar">finalizar</div>
+    <div class="finalizar" (click)="changeMenu('finalizar')">finalizar</div>
 </div>
 
 <div class="opcion" id="ingresar" *ngIf="menu_actual == 1" >
     <h2>ingresar</h2>
-    <div class="imagenexplicativa"><img src="assets\images\efectivo.JPG"></div>
+    <div class="imagenexplicativa">
+        <div><img src="assets\images\efectivo.JPG"></div>
+        <div><img src="assets\images\images.jpg" id="billetes"></div>
+    </div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+</div>
+
+<div class="opcion" id="dineroingresado" *ngIf="menu_actual == 5" >
+    <h2>ingresar</h2>
+    <div class="">
+        <p>Has ingresado 200€</p>
+    </div>
+    <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
+
+</div>
+
+<div class="opcion" id="dineroretirado" *ngIf="menu_actual == 6" >
+    <h2>retirar</h2>
+    <div class="">
+        <p>has retirado 200€</p>
+    </div>
+
+
     <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
 
 </div>
 
 <div class="opcion" id="retirar" *ngIf="menu_actual == 2" >
     <h2>retirar</h2>
+    <app-retirardinero (dineroRetiradoEvent)="actualizarSaldo($event)"></app-retirardinero>
     <div class="volver" (click)="changeMenu('principal')"><mat-icon>keyboard_return</mat-icon>Volver</div>
 </div>
 

@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { InterfazsencillaComponent } from './interfazsencilla/interfazsencilla.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { RetirardineroComponent } from './retirardinero/retirardinero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InterfazsencillaComponent
+    InterfazsencillaComponent,
+    RetirardineroComponent
   ],
   imports: [
     BrowserModule,
